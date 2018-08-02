@@ -4,117 +4,117 @@
   "description": "Internal tool for Anduin Design Team",
   "compatibleVersion": 3,
   "bundleVersion": 1,
-  "version": "1.1",
+  "version": "1.2",
   "icon": "icon.png",
   "appcast": "https://raw.githubusercontent.com/duyluonganduin/acl-sketch-plugin/master/.appcast.xml",
   "commands": [
     {
-      "name": "Generate short money number",
+      "name": "Money number - short",
       "identifier": "generateShortMoneyNumber",
       "script": "./acl.js",
       "handler": "generateShortMoneyNumber",
       "icon": "icon/money.png"
     },
     {
-      "name": "Generate money number",
+      "name": "Money number",
       "identifier": "generateMoneyNumber",
       "script": "./acl.js",
       "handler": "generateMoneyNumber",
       "icon": "icon/money.png"
     },
     {
-      "name": "Generate entity name",
+      "name": "Entity name",
       "identifier": "generateEntityName",
       "script": "./acl.js",
       "handler": "generateEntityName",
       "icon": "icon/office.png"
     },
     {
-      "name": "Generate company name",
+      "name": "Company name",
       "identifier": "generateCompanyName",
       "script": "./acl.js",
       "handler": "generateCompanyName",
       "icon": "icon/office.png"
     },
     {
-      "name": "Generate vc name",
+      "name": "Vc name",
       "identifier": "generateVCName",
       "script": "./acl.js",
       "handler": "generateVCName",
       "icon": "icon/office.png"
     },
     {
-      "name": "Generate lawfirm name",
+      "name": "Lawfirm name",
       "identifier": "generateLawfirmName",
       "script": "./acl.js",
       "handler": "generateLawfirmName",
       "icon": "icon/office.png"
     },
     {
-      "name": "Generate Turn",
+      "name": "Turn",
       "identifier": "generateTurn",
       "script": "./acl.js",
       "handler": "generateTurn",
       "icon": "icon/turn.png"
     },
     {
-      "name": "Generate Turn Term Sheet",
+      "name": "Turn Term Sheet",
       "identifier": "generateTurnTermSheet",
       "script": "./acl.js",
       "handler": "generateTurnTermSheet",
       "icon": "icon/turn.png"
     },
     {
-      "name": "Generate Turn Deal Docs",
+      "name": "Turn Deal Docs",
       "identifier": "generateTurnDealDocs",
       "script": "./acl.js",
       "handler": "generateTurnDealDocs",
       "icon": "icon/turn.png"
     },
     {
-      "name": "Generate Turn Signature",
+      "name": "Turn Signature",
       "identifier": "generateTurnSignature",
       "script": "./acl.js",
       "handler": "generateTurnSignature",
       "icon": "icon/turn.png"
     },
     {
-      "name": "Generate Turn Wiring",
+      "name": "Turn Wiring",
       "identifier": "generateTurnWiring",
       "script": "./acl.js",
       "handler": "generateTurnWiring",
       "icon": "icon/turn.png"
     },
     {
-      "name": "Generate Turn Closing",
+      "name": "Turn Closing",
       "identifier": "generateTurnClosing",
       "script": "./acl.js",
       "handler": "generateTurnClosing",
       "icon": "icon/turn.png"
     },
     {
-      "name": "Generate User",
+      "name": "User",
       "identifier": "generateUser",
       "script": "./acl.js",
       "handler": "generateUser",
       "icon": "icon/user.png"
     },
     {
-      "name": "Generate User Male",
+      "name": "User Male",
       "identifier": "generateUserMale",
       "script": "./acl.js",
       "handler": "generateUserMale",
       "icon": "icon/user.png"
     },
     {
-      "name": "Generate Turn Female",
+      "name": "Turn Female",
       "identifier": "generateUserFemale",
       "script": "./acl.js",
       "handler": "generateUserFemale",
       "icon": "icon/user.png"
     },
     {
-      "name": "Generate Doc Name",
+      "name": "Doc Name",
       "identifier": "generateDocName",
       "script": "./acl.js",
       "handler": "generateDocName",
