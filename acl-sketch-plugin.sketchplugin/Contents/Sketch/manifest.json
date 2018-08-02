@@ -4,7 +4,7 @@
   "description": "Internal tool for Anduin Design Team",
   "compatibleVersion": 3,
   "bundleVersion": 1,
-  "version": "1.0",
+  "version": "1.1",
   "icon": "icon.png",
   "appcast": "https://raw.githubusercontent.com/duyluonganduin/acl-sketch-plugin/master/.appcast.xml",
   "commands": [
