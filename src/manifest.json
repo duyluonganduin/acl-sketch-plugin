@@ -6,6 +6,7 @@
   "bundleVersion": 1,
   "version": "1.0",
   "icon": "icon.png",
+  "appcast": "https://raw.githubusercontent.com/duyluonganduin/acl-sketch-plugin/master/.appcast.xml",
   "commands": [
     {
       "name": "Generate short money number",
