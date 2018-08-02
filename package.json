@@ -1,6 +1,6 @@
 {
   "name": "acl-sketch-plugin",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Duy Luong",
   "description": "Internal tool for Anduin Design Team",
   "engines": {
