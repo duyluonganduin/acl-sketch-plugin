@@ -1,6 +1,8 @@
 {
   "name": "acl-sketch-plugin",
   "version": "0.1.0",
+  "author": "Duy Luong",
+  "description": "Internal tool for Anduin Design Team",
   "engines": {
     "sketch": ">=3.0"
   },
@@ -8,6 +10,7 @@
     "name": "acl-sketch-plugin",
     "manifest": "src/manifest.json",
     "main": "acl-sketch-plugin.sketchplugin",
+    "repository": "https://github.com/duyluonganduin/acl-sketch-plugin.git",
     "assets": [
       "assets/**/*"
     ]
