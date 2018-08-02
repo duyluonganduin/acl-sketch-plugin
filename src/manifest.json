@@ -4,7 +4,7 @@
   "description": "Internal tool for Anduin Design Team",
   "compatibleVersion": 3,
   "bundleVersion": 1,
-  "version": "1.2",
+  "version": "1.3",
   "icon": "icon.png",
   "appcast": "https://raw.githubusercontent.com/duyluonganduin/acl-sketch-plugin/master/.appcast.xml",
   "commands": [
@@ -37,7 +37,7 @@
       "icon": "icon/office.png"
     },
     {
-      "name": "Vc name",
+      "name": "VC name",
       "identifier": "generateVCName",
       "script": "./acl.js",
       "handler": "generateVCName",
@@ -58,35 +58,35 @@
       "icon": "icon/turn.png"
     },
     {
-      "name": "Turn Term Sheet",
+      "name": "Turn in Term Sheet",
       "identifier": "generateTurnTermSheet",
       "script": "./acl.js",
       "handler": "generateTurnTermSheet",
       "icon": "icon/turn.png"
     },
     {
-      "name": "Turn Deal Docs",
+      "name": "Turn in Deal Docs",
       "identifier": "generateTurnDealDocs",
       "script": "./acl.js",
       "handler": "generateTurnDealDocs",
       "icon": "icon/turn.png"
     },
     {
-      "name": "Turn Signature",
+      "name": "Turn in Signature",
       "identifier": "generateTurnSignature",
       "script": "./acl.js",
       "handler": "generateTurnSignature",
       "icon": "icon/turn.png"
     },
     {
-      "name": "Turn Wiring",
+      "name": "Turn in Wiring",
       "identifier": "generateTurnWiring",
       "script": "./acl.js",
       "handler": "generateTurnWiring",
       "icon": "icon/turn.png"
     },
     {
-      "name": "Turn Closing",
+      "name": "Turn in Closing",
       "identifier": "generateTurnClosing",
       "script": "./acl.js",
       "handler": "generateTurnClosing",
@@ -107,30 +107,41 @@
       "icon": "icon/user.png"
     },
     {
-      "name": "Turn Female",
+      "name": "User Female",
       "identifier": "generateUserFemale",
       "script": "./acl.js",
       "handler": "generateUserFemale",
       "icon": "icon/user.png"
     },
     {
-      "name": "Doc Name",
-      "identifier": "generateDocName",
+      "name": "Doc Type Name",
+      "identifier": "generateDocTypeName",
       "script": "./acl.js",
-      "handler": "generateDocName",
+      "handler": "generateDocTypeName",
+      "icon": "icon/file.png"
+    },
+    {
+      "name": "File Name",
+      "identifier": "generateFileName",
+      "script": "./acl.js",
+      "handler": "generateFileName",
       "icon": "icon/file.png"
     }
   ],
   "menu": {
     "title": "Anduin Data Generator",
     "items": [
-      "generateShortMoneyNumber",
-      "generateMoneyNumber",
-      "-",
       "generateEntityName",
       "generateCompanyName",
       "generateVCName",
       "generateLawfirmName",
+      "-",
+      "generateUser",
+      "generateUserMale",
+      "generateUserFemale",
+      "-",
+      "generateDocTypeName",
+      "generateFileName",
       "-",
       "generateTurn",
       "generateTurnTermSheet",
@@ -139,11 +150,8 @@
       "generateTurnWiring",
       "generateTurnClosing",
       "-",
-      "generateUser",
-      "generateUserMale",
-      "generateUserFemale",
-      "-",
-      "generateDocName"
+      "generateShortMoneyNumber",
+      "generateMoneyNumber"
     ]
   }
 }

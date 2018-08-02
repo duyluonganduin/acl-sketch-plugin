@@ -17,7 +17,7 @@ const Layer = sketch.Layer
 /* ======================================== */
 /* ACL constants
 /* ======================================== */
-const aclJsonUrl = 'https://api.jsonbin.io/b/5b62a032e013915146cc8930/1'
+const aclJsonUrl = 'https://api.jsonbin.io/b/5b62a032e013915146cc8930/2'
 
 /* ======================================== */
 /* Define some data sample
@@ -341,7 +341,7 @@ export function generateUserFemale(context) {
 /* Generate Doc names
 /* ======================================== */
 
-export function generateDocName(context) {
+export function generateDocTypeName(context) {
 	var document = sketch.fromNative(context.document)
 
 	fetch(aclJsonUrl)
@@ -352,6 +352,24 @@ export function generateDocName(context) {
 			var selection = document.selectedLayers
 			selection.forEach(layer => {
 				layer.text = docnames[getRandomInt(docnames.length)]
+			})
+			sketch.UI.message('✅ Done!')
+		})
+		.catch(e => sketch.UI.message(e))
+}
+
+export function generateFileName(context) {
+	var document = sketch.fromNative(context.document)
+
+	fetch(aclJsonUrl)
+		.then(response => response.text())
+		.then(text => {
+			var json = JSON.parse(text)
+			var filename = json.filenames
+			var extension = json.filetypes
+			var selection = document.selectedLayers
+			selection.forEach(layer => {
+				layer.text = filename[getRandomInt(filename.length)] + '.' + extension[getRandomInt(extension.length)]
 			})
 			sketch.UI.message('✅ Done!')
 		})

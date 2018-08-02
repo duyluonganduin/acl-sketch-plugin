@@ -851,7 +851,7 @@ module.exports = fetch
 /*!********************!*\
   !*** ./src/acl.js ***!
   \********************/
-/*! exports provided: generateShortMoneyNumber, generateMoneyNumber, generateEntityName, generateCompanyName, generateVCName, generateLawfirmName, generateTurn, generateTurnTermSheet, generateTurnDealDocs, generateTurnSignature, generateTurnWiring, generateTurnClosing, generateUser, generateUserMale, generateUserFemale, generateDocName, default */
+/*! exports provided: generateShortMoneyNumber, generateMoneyNumber, generateEntityName, generateCompanyName, generateVCName, generateLawfirmName, generateTurn, generateTurnTermSheet, generateTurnDealDocs, generateTurnSignature, generateTurnWiring, generateTurnClosing, generateUser, generateUserMale, generateUserFemale, generateDocTypeName, generateFileName, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -871,7 +871,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "generateUser", function() { return generateUser; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "generateUserMale", function() { return generateUserMale; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "generateUserFemale", function() { return generateUserFemale; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "generateDocName", function() { return generateDocName; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "generateDocTypeName", function() { return generateDocTypeName; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "generateFileName", function() { return generateFileName; });
 /* ======================================== */
 
 /* APL Sketch Plugin
@@ -895,7 +896,7 @@ var Layer = sketch.Layer;
 /* ACL constants
 /* ======================================== */
 
-var aclJsonUrl = 'https://api.jsonbin.io/b/5b62a032e013915146cc8930/1';
+var aclJsonUrl = 'https://api.jsonbin.io/b/5b62a032e013915146cc8930/2';
 /* ======================================== */
 
 /* Define some data sample
@@ -1207,7 +1208,7 @@ function generateUserFemale(context) {
 /* Generate Doc names
 /* ======================================== */
 
-function generateDocName(context) {
+function generateDocTypeName(context) {
   var document = sketch.fromNative(context.document);
   fetch(aclJsonUrl).then(function (response) {
     return response.text();
@@ -1217,6 +1218,23 @@ function generateDocName(context) {
     var selection = document.selectedLayers;
     selection.forEach(function (layer) {
       layer.text = docnames[getRandomInt(docnames.length)];
+    });
+    sketch.UI.message('✅ Done!');
+  }).catch(function (e) {
+    return sketch.UI.message(e);
+  });
+}
+function generateFileName(context) {
+  var document = sketch.fromNative(context.document);
+  fetch(aclJsonUrl).then(function (response) {
+    return response.text();
+  }).then(function (text) {
+    var json = JSON.parse(text);
+    var filename = json.filenames;
+    var extension = json.filetypes;
+    var selection = document.selectedLayers;
+    selection.forEach(function (layer) {
+      layer.text = filename[getRandomInt(filename.length)] + '.' + extension[getRandomInt(extension.length)];
     });
     sketch.UI.message('✅ Done!');
   }).catch(function (e) {
@@ -1280,6 +1298,7 @@ that['generateTurnClosing'] = __skpm_run.bind(this, 'generateTurnClosing');
 that['generateUser'] = __skpm_run.bind(this, 'generateUser');
 that['generateUserMale'] = __skpm_run.bind(this, 'generateUserMale');
 that['generateUserFemale'] = __skpm_run.bind(this, 'generateUserFemale');
-that['generateDocName'] = __skpm_run.bind(this, 'generateDocName')
+that['generateDocTypeName'] = __skpm_run.bind(this, 'generateDocTypeName');
+that['generateFileName'] = __skpm_run.bind(this, 'generateFileName')
 
 //# sourceMappingURL=acl.js.map
