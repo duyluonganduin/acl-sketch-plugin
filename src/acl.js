@@ -17,7 +17,7 @@ const Layer = sketch.Layer
 /* ======================================== */
 /* ACL constants
 /* ======================================== */
-const aclJsonUrl = 'https://api.jsonbin.io/b/5b62a032e013915146cc8930/2'
+const aclJsonUrl = 'https://api.jsonbin.io/b/5b62a032e013915146cc8930/latest'
 
 /* ======================================== */
 /* Define some data sample
